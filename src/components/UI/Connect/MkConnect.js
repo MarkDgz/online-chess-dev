@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import './Connect.scss';
+import './MkConnect.scss';
 
 const Connect = () => {
   const [account, setAccount] = useState(null);
