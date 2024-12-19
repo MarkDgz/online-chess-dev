@@ -27,7 +27,7 @@ const Connect = () => {
 
   return (
     <div>
-      <h1>Connect to MetaMask</h1>
+      <h1 class=".u-content-container">Connect to MetaMask</h1>
       <button class=".u-button" onClick={connectToMetaMask}>Connect to MetaMask</button>
       {account && <p>Account: {account}</p>}
     </div>
