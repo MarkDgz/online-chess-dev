@@ -7,30 +7,30 @@ const Connect = () => {
   const connectToMetaMask = async () => {
     if (window.ethereum) {
       try {
-        // Solicitar acceso a la cuenta del usuario
+        // Asking connection
         await window.ethereum.request({ method: 'eth_requestAccounts' });
-        // Crear una instancia de ethers.js
+        // creating  ethers.js instance
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setAccount(address);
-        console.log('Cuenta conectada:', address);
+        console.log('Account:', address);
       } catch (error) {
-        console.error('Error al conectar a MetaMask:', error);
+        console.error('Error can not connect to MetaMask Wallet:', error);
       }
     } else {
-      console.error('MetaMask no está instalado');
-      alert('MetaMask no está instalado');
+      console.error('MetaMask is not installed');
+      alert('MetaMask is not installed');
     }
   };
 
   return (
     <div>
-      <h1>Conectar a MetaMask</h1>
-      <button onClick={connectToMetaMask}>Conectar a MetaMask</button>
-      {account && <p>Cuenta conectada: {account}</p>}
+      <h1>Connect to MetaMask</h1>
+      <button onClick={connectToMetaMask}>Connect to MetaMask</button>
+      {account && <p>Account: {account}</p>}
     </div>
   );
 };
 
-export default Connect;
+export default MkConnect;
