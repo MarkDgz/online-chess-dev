@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<GameSelect />} />
           <Route path="/matchPlay" element={<MatchPlay />} />
-          <Route path="/friendPlay/*" element={<FriendPlay />} />
+          <Route path="/friendPlay" element={<FriendPlay />} />
           <Route path="/machinePlay" element={<Level />} />
           <Route path="/gameScene" element={<GameScene />} />
           <Route path="/connect" element={<Connect />} />
